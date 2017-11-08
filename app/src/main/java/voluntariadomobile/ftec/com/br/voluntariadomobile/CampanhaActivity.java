@@ -32,6 +32,12 @@ public class CampanhaActivity extends Activity {
                 startActivity(afinidade);
 
                 return true;
+            case R.id.mnu_dados:
+                Intent dados = new Intent(getApplicationContext(), EditActivity.class);
+                dados.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(dados);
+
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

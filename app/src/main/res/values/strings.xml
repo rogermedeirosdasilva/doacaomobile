@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Voluntariado Mobile - App</string>
+    <string name="app_name">Projeto Ajudar</string>
     <string name="email">E-mail</string>
     <string name="senha">Senha</string>
     <string name="entrar">Entrar</string>
@@ -98,5 +98,6 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
-    <string name="title_activity_afinidades">AfinidadesActivity</string>
+
+    <string name="meus_dados">Meus Dados</string>
 </resources>

@@ -5,4 +5,10 @@
         android:icon="@drawable/ic_favorite_white_24dp"
         android:showAsAction="ifRoom"
         android:title="@string/afinidades" />
+
+    <item
+        android:id="@+id/mnu_dados"
+        android:icon="@drawable/meus_dados"
+        android:showAsAction="ifRoom"
+        android:title="@string/meus_dados" />
 </menu>
