@@ -1,5 +1,6 @@
 package voluntariadomobile.ftec.com.br.voluntariadomobile.util;
 
+import voluntariadomobile.ftec.com.br.voluntariadomobile.bol.CartaoCampanha;
 import voluntariadomobile.ftec.com.br.voluntariadomobile.bol.Voluntario;
 
 /**
@@ -8,4 +9,5 @@ import voluntariadomobile.ftec.com.br.voluntariadomobile.bol.Voluntario;
 
 public class Globais {
     public static Voluntario UsuarioLogado;
+    public static CartaoCampanha Campanha;
 }

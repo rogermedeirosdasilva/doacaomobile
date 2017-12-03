@@ -49,6 +49,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="voluntariadomobile.ftec.com.br.voluntariadomobile.CampanhaActivity" />
         </activity>
+        <activity
+            android:name=".DoacaoActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".CampanhaActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="voluntariadomobile.ftec.com.br.voluntariadomobile.CampanhaActivity" />
+        </activity>
     </application>
 
 </manifest>

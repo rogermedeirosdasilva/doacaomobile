@@ -125,4 +125,22 @@ public class VoluntarioDAO extends BaseDAO {
 
         return v;
     }
+
+    public Voluntario ObtemPrimeiroRegistro() {
+        Voluntario v = null;
+
+        String sql = "select c.* from voluntario c" +
+                " limit 1";
+
+        this.open();
+        Cursor cursor = mDb.rawQuery(sql, null);
+        cursor.moveToFirst();
+        if (!cursor.isAfterLast()){
+            v = Preenche(cursor);
+        }
+        cursor.close();
+        this.close();
+
+        return v;
+    }
 }

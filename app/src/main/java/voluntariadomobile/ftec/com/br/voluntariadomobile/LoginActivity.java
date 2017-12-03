@@ -19,6 +19,8 @@ import voluntariadomobile.ftec.com.br.voluntariadomobile.util.ScreenUtils;
 
 public class LoginActivity extends Activity {
     private Context ctx;
+    private EditText fUsuario;
+    private EditText fSenha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,16 @@ public class LoginActivity extends Activity {
     }
 
     private void Bind() {
+        fUsuario = findViewById(R.id.email);
+        fSenha = findViewById(R.id.senha);
+
+        Voluntario remember = new VoluntarioDAO(this).ObtemPrimeiroRegistro();
+        if (remember != null) {
+            fUsuario.setText(remember.getEmail());
+            fSenha.setText("123456");
+            fUsuario.requestFocus();
+        }
+
         findViewById(R.id.btnInscreva).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,9 +64,6 @@ public class LoginActivity extends Activity {
         findViewById(R.id.btnEntrar).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText fUsuario = findViewById(R.id.email);
-                EditText fSenha = findViewById(R.id.senha);
-
                 if (!ScreenUtils.ValidaCamposObrigatorios(fUsuario) || !ScreenUtils.ValidaCamposObrigatorios(fSenha)) {
                     return ;
                 }
