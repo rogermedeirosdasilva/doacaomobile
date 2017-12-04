@@ -12,4 +12,5 @@
     <string name="doar">Doar</string>
     <string name="doacao">Doação</string>
     <string name="quant">Quantidade</string>
+    <string name="qrcode">QR Code</string>
 </resources>

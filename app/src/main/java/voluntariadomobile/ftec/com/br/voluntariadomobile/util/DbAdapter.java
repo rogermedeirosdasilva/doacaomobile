@@ -61,16 +61,16 @@ public class DbAdapter{
 					" CONSTRAINT pk_afinidade PRIMARY KEY (codigo)" +
 					");";
 
-			sql += "INSERT INTO afinidade values (1, 'Refugiados');";
-			sql += "INSERT INTO afinidade values (2, 'Crianças vítimas de abuso');";
-			sql += "INSERT INTO afinidade values (3, 'Pessoas em situação de rua');";
-			sql += "INSERT INTO afinidade values (4, 'Mulheres vítimas de violência');";
-			sql += "INSERT INTO afinidade values (5, 'Crianças desaparecidas');";
-			sql += "INSERT INTO afinidade values (6, 'Animais abandonados');";
-			sql += "INSERT INTO afinidade values (7, 'Crianças e adolescentes fora da escola');";
-			sql += "INSERT INTO afinidade values (8, 'Idosos');";
-			sql += "INSERT INTO afinidade values (9, 'Pessoas com deficiência');";
-			sql += "INSERT INTO afinidade values (10, 'Direitos Humanos');";
+			sql += "INSERT INTO afinidade values (1, 'Refugiados', 'N');";
+			sql += "INSERT INTO afinidade values (2, 'Crianças vítimas de abuso', 'N');";
+			sql += "INSERT INTO afinidade values (3, 'Pessoas em situação de rua', 'N');";
+			sql += "INSERT INTO afinidade values (4, 'Mulheres vítimas de violência', 'N');";
+			sql += "INSERT INTO afinidade values (5, 'Crianças desaparecidas', 'N');";
+			sql += "INSERT INTO afinidade values (6, 'Animais abandonados', 'N');";
+			sql += "INSERT INTO afinidade values (7, 'Crianças e adolescentes fora da escola', 'N');";
+			sql += "INSERT INTO afinidade values (8, 'Idosos', 'N');";
+			sql += "INSERT INTO afinidade values (9, 'Pessoas com deficiência', 'N');";
+			sql += "INSERT INTO afinidade values (10, 'Direitos Humanos', 'N');";
 
 			try
 			{
@@ -98,16 +98,16 @@ public class DbAdapter{
 						" CONSTRAINT pk_afinidade PRIMARY KEY (codigo)" +
 						");";
 
-				sql += "INSERT INTO afinidade values (1, 'Refugiados');";
-				sql += "INSERT INTO afinidade values (2, 'Crianças vítimas de abuso');";
-				sql += "INSERT INTO afinidade values (3, 'Pessoas em situação de rua');";
-				sql += "INSERT INTO afinidade values (4, 'Mulheres vítimas de violência');";
-				sql += "INSERT INTO afinidade values (5, 'Crianças desaparecidas');";
-				sql += "INSERT INTO afinidade values (6, 'Animais abandonados');";
-				sql += "INSERT INTO afinidade values (7, 'Crianças e adolescentes fora da escola');";
-				sql += "INSERT INTO afinidade values (8, 'Idosos');";
-				sql += "INSERT INTO afinidade values (9, 'Pessoas com deficiência');";
-				sql += "INSERT INTO afinidade values (10, 'Direitos Humanos');";
+				sql += "INSERT INTO afinidade values (1, 'Refugiados', 'N');";
+				sql += "INSERT INTO afinidade values (2, 'Crianças vítimas de abuso', 'N');";
+				sql += "INSERT INTO afinidade values (3, 'Pessoas em situação de rua', 'N');";
+				sql += "INSERT INTO afinidade values (4, 'Mulheres vítimas de violência', 'N');";
+				sql += "INSERT INTO afinidade values (5, 'Crianças desaparecidas', 'N');";
+				sql += "INSERT INTO afinidade values (6, 'Animais abandonados', 'N');";
+				sql += "INSERT INTO afinidade values (7, 'Crianças e adolescentes fora da escola', 'N');";
+				sql += "INSERT INTO afinidade values (8, 'Idosos', 'N');";
+				sql += "INSERT INTO afinidade values (9, 'Pessoas com deficiência', 'N');";
+				sql += "INSERT INTO afinidade values (10, 'Direitos Humanos', 'N');";
 			}
 
 			if (oldVersion < 3) {

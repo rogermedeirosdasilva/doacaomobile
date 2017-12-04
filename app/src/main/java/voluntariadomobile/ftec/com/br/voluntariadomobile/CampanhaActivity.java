@@ -10,6 +10,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 import java.util.ArrayList;
 
@@ -55,6 +59,18 @@ public class CampanhaActivity extends Activity {
     }
 
     @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode,
+                resultCode, intent);
+        if (result != null) {
+            String contents = result.getContents();
+            if (contents != null) {
+                Toast.makeText(this, result.getContents().toString(), Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
@@ -69,7 +85,17 @@ public class CampanhaActivity extends Activity {
                 dados.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(dados);
 
+
                 return true;
+
+            case R.id.qr:
+                IntentIntegrator integrator = new IntentIntegrator(CampanhaActivity.this);
+                integrator.addExtra("SCAN_WIDTH", 200);
+                integrator.addExtra("SCAN_HEIGHT", 200);
+                integrator.addExtra("SCAN_MODE", "QR_CODE_MODE,PRODUCT_MODE");
+
+                integrator.addExtra("PROMPT_MESSAGE", "Lendo o QRCode!");
+                integrator.initiateScan(IntentIntegrator.QR_CODE_TYPES);
             default:
                 return super.onOptionsItemSelected(item);
         }
